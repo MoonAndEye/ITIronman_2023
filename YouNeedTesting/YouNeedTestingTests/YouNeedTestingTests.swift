@@ -2,11 +2,10 @@
 //  YouNeedTestingTests.swift
 //  YouNeedTestingTests
 //
-//  Created by cm0679 on 2023/8/16.
+//  Created by cm0679 on 2023/8/21.
 //
 
 import XCTest
-@testable import YouNeedTesting
 
 final class YouNeedTestingTests: XCTestCase {
 
@@ -28,7 +27,7 @@ final class YouNeedTestingTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }
