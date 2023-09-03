@@ -12,6 +12,9 @@
 		9B10FBF62A9F4856009CE54C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B10FBF52A9F4856009CE54C /* Assets.xcassets */; };
 		9B10FBF92A9F4856009CE54C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B10FBF82A9F4856009CE54C /* Preview Assets.xcassets */; };
 		9B10FC032A9F4856009CE54C /* TwStockToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B10FC022A9F4856009CE54C /* TwStockToolsTests.swift */; };
+		9B10FC1F2A9F49E4009CE54C /* SettlementRemindInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B10FC1E2A9F49E4009CE54C /* SettlementRemindInputView.swift */; };
+		9B10FC222A9F4A4B009CE54C /* StockTradingRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B10FC212A9F4A4B009CE54C /* StockTradingRecord.swift */; };
+		9B10FC242AA1B7ED009CE54C /* StockTradingRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B10FC232AA1B7EC009CE54C /* StockTradingRecordTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +35,9 @@
 		9B10FBF82A9F4856009CE54C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9B10FBFE2A9F4856009CE54C /* TwStockToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwStockToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B10FC022A9F4856009CE54C /* TwStockToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwStockToolsTests.swift; sourceTree = "<group>"; };
+		9B10FC1E2A9F49E4009CE54C /* SettlementRemindInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettlementRemindInputView.swift; sourceTree = "<group>"; };
+		9B10FC212A9F4A4B009CE54C /* StockTradingRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingRecord.swift; sourceTree = "<group>"; };
+		9B10FC232AA1B7EC009CE54C /* StockTradingRecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingRecordTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				9B10FBF12A9F4854009CE54C /* TwStockToolsApp.swift */,
-				9B10FBF32A9F4854009CE54C /* ContentView.swift */,
+				9B10FC202A9F4A2F009CE54C /* Models */,
+				9B10FC1D2A9F49CF009CE54C /* Views */,
 				9B10FBF52A9F4856009CE54C /* Assets.xcassets */,
 				9B10FBF72A9F4856009CE54C /* Preview Content */,
 			);
@@ -92,9 +99,27 @@
 		9B10FC012A9F4856009CE54C /* TwStockToolsTests */ = {
 			isa = PBXGroup;
 			children = (
+				9B10FC232AA1B7EC009CE54C /* StockTradingRecordTests.swift */,
 				9B10FC022A9F4856009CE54C /* TwStockToolsTests.swift */,
 			);
 			path = TwStockToolsTests;
+			sourceTree = "<group>";
+		};
+		9B10FC1D2A9F49CF009CE54C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B10FBF32A9F4854009CE54C /* ContentView.swift */,
+				9B10FC1E2A9F49E4009CE54C /* SettlementRemindInputView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9B10FC202A9F4A2F009CE54C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9B10FC212A9F4A4B009CE54C /* StockTradingRecord.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +222,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B10FC1F2A9F49E4009CE54C /* SettlementRemindInputView.swift in Sources */,
 				9B10FBF42A9F4854009CE54C /* ContentView.swift in Sources */,
+				9B10FC222A9F4A4B009CE54C /* StockTradingRecord.swift in Sources */,
 				9B10FBF22A9F4854009CE54C /* TwStockToolsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B10FC032A9F4856009CE54C /* TwStockToolsTests.swift in Sources */,
+				9B10FC242AA1B7ED009CE54C /* StockTradingRecordTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
