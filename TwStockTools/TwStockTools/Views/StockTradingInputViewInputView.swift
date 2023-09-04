@@ -7,23 +7,15 @@
 
 import SwiftUI
 
-extension StockTradingInputView {
-    
-    enum TradingSide: Int {
-        case buy = 0
-        case sell
-    }
-}
-
 struct StockTradingInputView: View {
     
-    @State var commodityID: String = ""
-    @State var commodityName: String = ""
+    @State var stockID: String = ""
+    @State var stockName: String = ""
     
     @State var tradingSide: TradingSide = .buy
     
     @State var tradingShares: String = ""
-    @State var tradingCostPerShare: String = ""
+    @State var tradingAmount: String = ""
     
     var body: some View {
         VStack {
@@ -36,7 +28,7 @@ struct StockTradingInputView: View {
             HStack {
                 Text("股票代號")
                     .padding(.horizontal)
-                TextField("請輸入股票代號", text: $commodityID)
+                TextField("請輸入股票代號", text: $stockID)
                     .textFieldStyle(.roundedBorder)
                     .padding(.horizontal)
             }
@@ -44,7 +36,7 @@ struct StockTradingInputView: View {
             HStack {
                 Text("股票名稱")
                     .padding(.horizontal)
-                TextField("請輸入股票名稱", text: $commodityName)
+                TextField("請輸入股票名稱", text: $stockName)
                     .textFieldStyle(.roundedBorder)
                     .padding(.horizontal)
             }
@@ -65,9 +57,9 @@ struct StockTradingInputView: View {
             }
             
             HStack {
-                Text("成交金額(每股)")
+                Text("成交金額")
                     .padding(.horizontal)
-                TextField("請輸入成交金額(每股)", text: $tradingCostPerShare)
+                TextField("請輸入成交金額", text: $tradingAmount)
                     .textFieldStyle(.roundedBorder)
                     .padding(.horizontal)
             }

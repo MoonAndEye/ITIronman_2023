@@ -15,6 +15,9 @@
 		9B10FC1F2A9F49E4009CE54C /* StockTradingInputViewInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B10FC1E2A9F49E4009CE54C /* StockTradingInputViewInputView.swift */; };
 		9B10FC222A9F4A4B009CE54C /* StockTradingRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B10FC212A9F4A4B009CE54C /* StockTradingRecord.swift */; };
 		9B10FC242AA1B7ED009CE54C /* StockTradingRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B10FC232AA1B7EC009CE54C /* StockTradingRecordTests.swift */; };
+		9BFE624A2AA4BB4B00F4F7BC /* StockRecordUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE62492AA4BB4B00F4F7BC /* StockRecordUtility.swift */; };
+		9BFE624C2AA4DFDD00F4F7BC /* StockRecordUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE624B2AA4DFDD00F4F7BC /* StockRecordUtilityTests.swift */; };
+		9BFE624E2AA571CF00F4F7BC /* TradingSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE624D2AA571CF00F4F7BC /* TradingSide.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		9B10FC1E2A9F49E4009CE54C /* StockTradingInputViewInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingInputViewInputView.swift; sourceTree = "<group>"; };
 		9B10FC212A9F4A4B009CE54C /* StockTradingRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingRecord.swift; sourceTree = "<group>"; };
 		9B10FC232AA1B7EC009CE54C /* StockTradingRecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingRecordTests.swift; sourceTree = "<group>"; };
+		9BFE62492AA4BB4B00F4F7BC /* StockRecordUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRecordUtility.swift; sourceTree = "<group>"; };
+		9BFE624B2AA4DFDD00F4F7BC /* StockRecordUtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRecordUtilityTests.swift; sourceTree = "<group>"; };
+		9BFE624D2AA571CF00F4F7BC /* TradingSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingSide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				9B10FBF12A9F4854009CE54C /* TwStockToolsApp.swift */,
+				9BFE62482AA4BB3400F4F7BC /* Utilities */,
 				9B10FC202A9F4A2F009CE54C /* Models */,
 				9B10FC1D2A9F49CF009CE54C /* Views */,
 				9B10FBF52A9F4856009CE54C /* Assets.xcassets */,
@@ -99,6 +106,7 @@
 		9B10FC012A9F4856009CE54C /* TwStockToolsTests */ = {
 			isa = PBXGroup;
 			children = (
+				9BFE624B2AA4DFDD00F4F7BC /* StockRecordUtilityTests.swift */,
 				9B10FC232AA1B7EC009CE54C /* StockTradingRecordTests.swift */,
 				9B10FC022A9F4856009CE54C /* TwStockToolsTests.swift */,
 			);
@@ -118,8 +126,17 @@
 			isa = PBXGroup;
 			children = (
 				9B10FC212A9F4A4B009CE54C /* StockTradingRecord.swift */,
+				9BFE624D2AA571CF00F4F7BC /* TradingSide.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9BFE62482AA4BB3400F4F7BC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9BFE62492AA4BB4B00F4F7BC /* StockRecordUtility.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +242,8 @@
 				9B10FC1F2A9F49E4009CE54C /* StockTradingInputViewInputView.swift in Sources */,
 				9B10FBF42A9F4854009CE54C /* ContentView.swift in Sources */,
 				9B10FC222A9F4A4B009CE54C /* StockTradingRecord.swift in Sources */,
+				9BFE624A2AA4BB4B00F4F7BC /* StockRecordUtility.swift in Sources */,
+				9BFE624E2AA571CF00F4F7BC /* TradingSide.swift in Sources */,
 				9B10FBF22A9F4854009CE54C /* TwStockToolsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B10FC032A9F4856009CE54C /* TwStockToolsTests.swift in Sources */,
+				9BFE624C2AA4DFDD00F4F7BC /* StockRecordUtilityTests.swift in Sources */,
 				9B10FC242AA1B7ED009CE54C /* StockTradingRecordTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

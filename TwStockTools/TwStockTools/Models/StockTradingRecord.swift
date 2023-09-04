@@ -7,14 +7,6 @@
 
 import Foundation
 
-extension StockTradingRecord {
-    
-    enum TradingSide {
-        case buy
-        case sell
-    }
-}
-
 struct StockTradingRecord {
     
     let stockID: String
