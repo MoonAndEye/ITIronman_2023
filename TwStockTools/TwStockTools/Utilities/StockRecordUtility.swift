@@ -17,7 +17,12 @@ extension StockRecordUtility {
 
 struct StockRecordUtility {
     
-    func getStockRecord(stockID: String, stockName: String, tradingSide: TradingSide, stockShares: String, stockCostPerShare: String) -> Result<StockTradingRecord, Error> {
+    func getStockRecord(stockID: String,
+                        stockName: String,
+                        tradingSide: TradingSide,
+                        stockShares: String,
+                        stockCostPerShare: String,
+                        tradingDate: Date) -> Result<StockTradingRecord, Error> {
         
         /// 不可以輸入空值
         if stockID.isEmpty ||
@@ -40,11 +45,21 @@ struct StockRecordUtility {
         
         /// amount 成交金額 是 成交股數 * 每股價價
         let amount = stockSharesInt * stockCostPerShareInt
+        /// 將 Date 轉換成 String
+        let tradingDateStr = getDateStr(from: tradingDate)
         
         return .success(StockTradingRecord(stockID: stockID,
                                            stockName: stockName,
                                            tradingSide: tradingSide,
                                            tradingShares: stockSharesInt,
-                                           tradingAmount: amount))
+                                           tradingAmount: amount,
+                                           tradingDateStr: tradingDateStr))
+    }
+    
+    private func getDateStr(from date: Date) -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: date)
     }
 }

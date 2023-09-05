@@ -16,11 +16,20 @@ final class StockRecordUtilityTests: XCTestCase {
     override func tearDownWithError() throws {
     }
     
+    /// 2023-09-05 05:09:55
+    private var timeInterval: TimeInterval {
+        1693890595
+    }
+    /// 2023-09-05 05:09:55
+    private var date: Date {
+        Date(timeIntervalSince1970: timeInterval)
+    }
+    
     func testCreateStockRecord() throws {
         
         /// 這個 test 是可以在還沒寫實作前先寫的
         /// 因為已經列出了測項，有測項就可以寫 test
-        let result = StockRecordUtility().getStockRecord(stockID: "", stockName: "", tradingSide: .buy, stockShares: "", stockCostPerShare: "")
+        let result = StockRecordUtility().getStockRecord(stockID: "", stockName: "", tradingSide: .buy, stockShares: "", stockCostPerShare: "", tradingDate: date)
         
         /// 這邊的 Assert 也可以在還沒宣告對應的 Error 物件前先寫
         switch result {
@@ -36,7 +45,7 @@ final class StockRecordUtilityTests: XCTestCase {
     func testTradingShareCannotConvertToInt() throws {
         
     
-        let result = StockRecordUtility().getStockRecord(stockID: "0050", stockName: "元大50", tradingSide: .buy, stockShares: "a", stockCostPerShare: "130")
+        let result = StockRecordUtility().getStockRecord(stockID: "0050", stockName: "元大50", tradingSide: .buy, stockShares: "a", stockCostPerShare: "130", tradingDate: date)
         
         switch result {
             case .success(_):
@@ -50,7 +59,7 @@ final class StockRecordUtilityTests: XCTestCase {
     
     func testTradingCostPerShareConvertToInt() throws {
         
-        let result = StockRecordUtility().getStockRecord(stockID: "0050", stockName: "元大50", tradingSide: .buy, stockShares: "1000", stockCostPerShare: "a")
+        let result = StockRecordUtility().getStockRecord(stockID: "0050", stockName: "元大50", tradingSide: .buy, stockShares: "1000", stockCostPerShare: "a", tradingDate: date)
         
         switch result {
             case .success(_):
@@ -64,7 +73,7 @@ final class StockRecordUtilityTests: XCTestCase {
     
     func testTradingSharesBiggerThanZero() throws {
         
-        let result = StockRecordUtility().getStockRecord(stockID: "0050", stockName: "元大50", tradingSide: .buy, stockShares: "-1000", stockCostPerShare: "130")
+        let result = StockRecordUtility().getStockRecord(stockID: "0050", stockName: "元大50", tradingSide: .buy, stockShares: "-1000", stockCostPerShare: "130", tradingDate: date)
         
         switch result {
             case .success(_):
@@ -78,7 +87,7 @@ final class StockRecordUtilityTests: XCTestCase {
     
     func testCostPerShareBiggerThanZero() throws {
         
-        let result = StockRecordUtility().getStockRecord(stockID: "0050", stockName: "元大50", tradingSide: .buy, stockShares: "1000", stockCostPerShare: "-130")
+        let result = StockRecordUtility().getStockRecord(stockID: "0050", stockName: "元大50", tradingSide: .buy, stockShares: "1000", stockCostPerShare: "-130", tradingDate: date)
         
         switch result {
             case .success(_):
@@ -92,7 +101,8 @@ final class StockRecordUtilityTests: XCTestCase {
     
     func testStockRecordStockProperties() throws {
         
-        let result = StockRecordUtility().getStockRecord(stockID: "0050", stockName: "元大50", tradingSide: .buy, stockShares: "1000", stockCostPerShare: "130")
+        
+        let result = StockRecordUtility().getStockRecord(stockID: "0050", stockName: "元大50", tradingSide: .buy, stockShares: "1000", stockCostPerShare: "130", tradingDate: date)
         
         switch result {
             case .success(let record):
@@ -103,6 +113,7 @@ final class StockRecordUtilityTests: XCTestCase {
                 XCTAssertEqual(record.tradingShares, 1000)
                 /// trading Amount 是交易總金額，所以是 1000 * 130 = 130000
                 XCTAssertEqual(record.tradingAmount, 130000)
+                XCTAssertEqual(record.tradingDateStr, "2023-09-05")
             case .failure(_):
                 XCTFail("Test failed")
         }
