@@ -11,7 +11,8 @@ import SwiftUI
 struct TwStockToolsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            StockTradingInputView()
         }
     }
 }

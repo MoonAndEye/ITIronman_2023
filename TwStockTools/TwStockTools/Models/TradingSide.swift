@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum TradingSide: Int {
+enum TradingSide: Int, Equatable {
     case buy = 0
     case sell
 }

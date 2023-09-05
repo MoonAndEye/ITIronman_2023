@@ -18,4 +18,7 @@ struct StockTradingRecord {
     
     /// 成交金額
     let tradingAmount: Int
+    
+    /// 成交日期，格式為 yyyy-mm-dd
+    let tradingDateStr: String
 }
