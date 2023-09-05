@@ -22,13 +22,15 @@ final class StockRecordTests: XCTestCase {
                                        stockName: "台泥",
                                        tradingSide: .buy,
                                        tradingShares: 1000,
-                                       tradingAmount: 35000)
+                                       tradingAmount: 35000,
+                                       tradingDateStr: "2023-09-08")
         
         XCTAssertEqual(model.stockID, "1101")
         XCTAssertEqual(model.stockName, "台泥")
         XCTAssertEqual(model.tradingSide, .buy)
         XCTAssertEqual(model.tradingShares, 1000)
         XCTAssertEqual(model.tradingAmount, 35000)
+        XCTAssertEqual(model.tradingDateStr, "2023-09-08")
     }
     
     func testStockTradingRecordSell() {
@@ -37,12 +39,14 @@ final class StockRecordTests: XCTestCase {
                                        stockName: "台泥",
                                        tradingSide: .buy,
                                        tradingShares: -2000,
-                                       tradingAmount: -70000)
+                                       tradingAmount: -70000,
+                                       tradingDateStr: "2023-09-08")
         
         XCTAssertEqual(model.stockID, "1101")
         XCTAssertEqual(model.stockName, "台泥")
         XCTAssertEqual(model.tradingSide, .buy)
         XCTAssertEqual(model.tradingShares, -2000)
         XCTAssertEqual(model.tradingAmount, -70000)
+        XCTAssertEqual(model.tradingDateStr, "2023-09-08")
     }
 }
