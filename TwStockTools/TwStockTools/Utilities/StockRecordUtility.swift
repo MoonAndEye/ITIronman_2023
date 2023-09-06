@@ -45,8 +45,8 @@ struct StockRecordUtility {
         
         /// amount 成交金額 是 成交股數 * 每股價價
         let amount = stockSharesInt * stockCostPerShareInt
-        /// 將 Date 轉換成 String
-        let tradingDateStr = getDateStr(from: tradingDate)
+        /// 將 Date 轉換成 String，依 SRP 原則，這個工作應由 DateUtility 負責
+        let tradingDateStr = DateUtility().getString(from: tradingDate)
         
         return .success(StockTradingRecord(stockID: stockID,
                                            stockName: stockName,
@@ -54,12 +54,5 @@ struct StockRecordUtility {
                                            tradingShares: stockSharesInt,
                                            tradingAmount: amount,
                                            tradingDateStr: tradingDateStr))
-    }
-    
-    private func getDateStr(from date: Date) -> String {
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        return dateFormatter.string(from: date)
     }
 }
