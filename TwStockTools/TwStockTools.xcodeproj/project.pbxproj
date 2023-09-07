@@ -20,6 +20,8 @@
 		9BFE624E2AA571CF00F4F7BC /* TradingSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE624D2AA571CF00F4F7BC /* TradingSide.swift */; };
 		9BFE62502AA784A400F4F7BC /* DateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE624F2AA784A400F4F7BC /* DateUtility.swift */; };
 		9BFE62522AA784AE00F4F7BC /* DateUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE62512AA784AE00F4F7BC /* DateUtilityTests.swift */; };
+		9BFE625D2AA9985300F4F7BC /* StockTradingRecordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE625C2AA9985300F4F7BC /* StockTradingRecordStore.swift */; };
+		9BFE625F2AA99A0C00F4F7BC /* StockTradingRecordStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE625E2AA99A0C00F4F7BC /* StockTradingRecordStoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		9BFE624D2AA571CF00F4F7BC /* TradingSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingSide.swift; sourceTree = "<group>"; };
 		9BFE624F2AA784A400F4F7BC /* DateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtility.swift; sourceTree = "<group>"; };
 		9BFE62512AA784AE00F4F7BC /* DateUtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtilityTests.swift; sourceTree = "<group>"; };
+		9BFE625C2AA9985300F4F7BC /* StockTradingRecordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingRecordStore.swift; sourceTree = "<group>"; };
+		9BFE625E2AA99A0C00F4F7BC /* StockTradingRecordStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingRecordStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 		9B10FC012A9F4856009CE54C /* TwStockToolsTests */ = {
 			isa = PBXGroup;
 			children = (
+				9BFE625E2AA99A0C00F4F7BC /* StockTradingRecordStoreTests.swift */,
 				9BFE62512AA784AE00F4F7BC /* DateUtilityTests.swift */,
 				9BFE624B2AA4DFDD00F4F7BC /* StockRecordUtilityTests.swift */,
 				9B10FC232AA1B7EC009CE54C /* StockTradingRecordTests.swift */,
@@ -132,6 +137,7 @@
 			children = (
 				9B10FC212A9F4A4B009CE54C /* StockTradingRecord.swift */,
 				9BFE624D2AA571CF00F4F7BC /* TradingSide.swift */,
+				9BFE625C2AA9985300F4F7BC /* StockTradingRecordStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B10FC1F2A9F49E4009CE54C /* StockTradingInputViewInputView.swift in Sources */,
+				9BFE625D2AA9985300F4F7BC /* StockTradingRecordStore.swift in Sources */,
 				9B10FBF42A9F4854009CE54C /* ContentView.swift in Sources */,
 				9B10FC222A9F4A4B009CE54C /* StockTradingRecord.swift in Sources */,
 				9BFE62502AA784A400F4F7BC /* DateUtility.swift in Sources */,
@@ -260,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B10FC032A9F4856009CE54C /* TwStockToolsTests.swift in Sources */,
+				9BFE625F2AA99A0C00F4F7BC /* StockTradingRecordStoreTests.swift in Sources */,
 				9BFE624C2AA4DFDD00F4F7BC /* StockRecordUtilityTests.swift in Sources */,
 				9BFE62522AA784AE00F4F7BC /* DateUtilityTests.swift in Sources */,
 				9B10FC242AA1B7ED009CE54C /* StockTradingRecordTests.swift in Sources */,
