@@ -12,7 +12,8 @@ struct TwStockToolsApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            StockTradingInputView()
+//            StockTradingInputView()
+            TradingRecordListView()
         }
     }
 }

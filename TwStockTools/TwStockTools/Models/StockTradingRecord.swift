@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct StockTradingRecord {
+struct StockTradingRecord: Identifiable {
+    
+    let id: String = UUID().uuidString
     
     let stockID: String
     let stockName: String

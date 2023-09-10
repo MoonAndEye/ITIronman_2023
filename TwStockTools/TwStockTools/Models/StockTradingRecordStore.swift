@@ -8,11 +8,11 @@
 import Combine
 import Foundation
 
-class StockTradingRecordStore {
+class StockTradingRecordStore: ObservableObject {
     
     var recordPublisher = CurrentValueSubject<[StockTradingRecord], Never>([])
     
-    var records: [StockTradingRecord] = [] {
+    @Published var records: [StockTradingRecord] = [] {
         didSet {
             /// 當 records 一有變化，就 send
             recordPublisher.send(records)
