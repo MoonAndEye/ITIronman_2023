@@ -23,6 +23,10 @@
 		9BFE625D2AA9985300F4F7BC /* StockTradingRecordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE625C2AA9985300F4F7BC /* StockTradingRecordStore.swift */; };
 		9BFE625F2AA99A0C00F4F7BC /* StockTradingRecordStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE625E2AA99A0C00F4F7BC /* StockTradingRecordStoreTests.swift */; };
 		9BFE62712AAA272000F4F7BC /* TradingRecordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE62702AAA272000F4F7BC /* TradingRecordListView.swift */; };
+		9BFE62742AAE216600F4F7BC /* EmptyRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE62732AAE216600F4F7BC /* EmptyRecordView.swift */; };
+		9BFE62922AB9DC4100F4F7BC /* TapCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE62912AB9DC4100F4F7BC /* TapCounterViewController.swift */; };
+		9BFE62952AB9DCBA00F4F7BC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9BFE62942AB9DCBA00F4F7BC /* SnapKit */; };
+		9BFE62972AB9DCEF00F4F7BC /* TapCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE62962AB9DCEF00F4F7BC /* TapCounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,9 @@
 		9BFE625E2AA99A0C00F4F7BC /* StockTradingRecordStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingRecordStoreTests.swift; sourceTree = "<group>"; };
 		9BFE62702AAA272000F4F7BC /* TradingRecordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingRecordListView.swift; sourceTree = "<group>"; };
 		9BFE62722AAA2B0700F4F7BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9BFE62732AAE216600F4F7BC /* EmptyRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRecordView.swift; sourceTree = "<group>"; };
+		9BFE62912AB9DC4100F4F7BC /* TapCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapCounterViewController.swift; sourceTree = "<group>"; };
+		9BFE62962AB9DCEF00F4F7BC /* TapCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapCounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFE62952AB9DCBA00F4F7BC /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +106,7 @@
 			children = (
 				9BFE62722AAA2B0700F4F7BC /* Info.plist */,
 				9B10FBF12A9F4854009CE54C /* TwStockToolsApp.swift */,
+				9BFE628E2AB9DC2300F4F7BC /* ViewControllers */,
 				9BFE62482AA4BB3400F4F7BC /* Utilities */,
 				9B10FC202A9F4A2F009CE54C /* Models */,
 				9B10FC1D2A9F49CF009CE54C /* Views */,
@@ -133,6 +142,8 @@
 				9B10FBF32A9F4854009CE54C /* ContentView.swift */,
 				9BFE62702AAA272000F4F7BC /* TradingRecordListView.swift */,
 				9B10FC1E2A9F49E4009CE54C /* StockTradingInputViewInputView.swift */,
+				9BFE62732AAE216600F4F7BC /* EmptyRecordView.swift */,
+				9BFE62962AB9DCEF00F4F7BC /* TapCounterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +167,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		9BFE628E2AB9DC2300F4F7BC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9BFE62912AB9DC4100F4F7BC /* TapCounterViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,6 +191,9 @@
 			dependencies = (
 			);
 			name = TwStockTools;
+			packageProductDependencies = (
+				9BFE62942AB9DCBA00F4F7BC /* SnapKit */,
+			);
 			productName = TwStockTools;
 			productReference = 9B10FBEE2A9F4854009CE54C /* TwStockTools.app */;
 			productType = "com.apple.product-type.application";
@@ -222,6 +244,9 @@
 				Base,
 			);
 			mainGroup = 9B10FBE52A9F4854009CE54C;
+			packageReferences = (
+				9BFE62932AB9DCBA00F4F7BC /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 9B10FBEF2A9F4854009CE54C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,10 +284,13 @@
 				9B10FC1F2A9F49E4009CE54C /* StockTradingInputViewInputView.swift in Sources */,
 				9BFE625D2AA9985300F4F7BC /* StockTradingRecordStore.swift in Sources */,
 				9B10FBF42A9F4854009CE54C /* ContentView.swift in Sources */,
+				9BFE62972AB9DCEF00F4F7BC /* TapCounterView.swift in Sources */,
+				9BFE62742AAE216600F4F7BC /* EmptyRecordView.swift in Sources */,
 				9B10FC222A9F4A4B009CE54C /* StockTradingRecord.swift in Sources */,
 				9BFE62502AA784A400F4F7BC /* DateUtility.swift in Sources */,
 				9BFE624A2AA4BB4B00F4F7BC /* StockRecordUtility.swift in Sources */,
 				9BFE624E2AA571CF00F4F7BC /* TradingSide.swift in Sources */,
+				9BFE62922AB9DC4100F4F7BC /* TapCounterViewController.swift in Sources */,
 				9B10FBF22A9F4854009CE54C /* TwStockToolsApp.swift in Sources */,
 				9BFE62712AAA272000F4F7BC /* TradingRecordListView.swift in Sources */,
 			);
@@ -534,6 +562,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9BFE62932AB9DCBA00F4F7BC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9BFE62942AB9DCBA00F4F7BC /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9BFE62932AB9DCBA00F4F7BC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9B10FBE62A9F4854009CE54C /* Project object */;
 }

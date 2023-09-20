@@ -19,6 +19,21 @@ class StockTradingRecordStore: ObservableObject {
         }
     }
     
+    func getRecord(stockID: String,
+                   stockName: String,
+                   tradingSide: TradingSide,
+                   tradingShares: Int,
+                   tradingAmount: Int,
+                   tradingDateStr: String) -> StockTradingRecord {
+        
+        StockTradingRecord(stockID: stockID,
+                           stockName: stockName,
+                           tradingSide: tradingSide,
+                           tradingShares: tradingShares,
+                           tradingAmount: tradingAmount,
+                           tradingDateStr: tradingDateStr)
+    }
+    
     func add(_ record: StockTradingRecord) {
         records.append(record)
     }

@@ -13,7 +13,8 @@ struct TwStockToolsApp: App {
         WindowGroup {
 //            ContentView()
 //            StockTradingInputView()
-            TradingRecordListView()
+//            TradingRecordListView()
+            TapCounterView()
         }
     }
 }
