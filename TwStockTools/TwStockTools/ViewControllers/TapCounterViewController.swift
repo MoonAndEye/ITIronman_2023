@@ -10,16 +10,18 @@ import UIKit
 
 class TapCounterViewController: UIViewController {
     
+    var userDefaults: UserDefaultsProtocol = UserDefaults.standard
+    
     private var count: Int = 0 {
         didSet {
             countLabel.text = "已經點擊了 \(count) 下"
-            UserDefaults.standard.set(count, forKey: "tapCount")
+            userDefaults.set(count, forKey: "tapCount")
         }
     }
     
-    private lazy var countLabel: UILabel = .init()
+    lazy var countLabel: UILabel = .init()
     
-    private lazy var addButton: UIButton = {
+    lazy var addButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("按下去就 + 1", for: .normal)
         button.addTarget(self, action: #selector(countButtonDidTap), for: .touchUpInside)
@@ -29,7 +31,7 @@ class TapCounterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        count = UserDefaults.standard.integer(forKey: "tapCount")
+        count = userDefaults.integer(forKey: "tapCount")
     }
     
     private func setupUI() {
@@ -54,4 +56,7 @@ class TapCounterViewController: UIViewController {
         count += 1
         print("current tap count: \(count)")
     }
+}
+
+extension UserDefaults: UserDefaultsProtocol {
 }

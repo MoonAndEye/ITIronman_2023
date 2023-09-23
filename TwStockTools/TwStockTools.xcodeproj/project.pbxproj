@@ -27,6 +27,9 @@
 		9BFE62922AB9DC4100F4F7BC /* TapCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE62912AB9DC4100F4F7BC /* TapCounterViewController.swift */; };
 		9BFE62952AB9DCBA00F4F7BC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9BFE62942AB9DCBA00F4F7BC /* SnapKit */; };
 		9BFE62972AB9DCEF00F4F7BC /* TapCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE62962AB9DCEF00F4F7BC /* TapCounterView.swift */; };
+		9BFE62A72ABB281900F4F7BC /* UserDefaultsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE62A62ABB281900F4F7BC /* UserDefaultsProtocol.swift */; };
+		9BFE62AB2ABB2E8A00F4F7BC /* UserDefaultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE62AA2ABB2E8A00F4F7BC /* UserDefaultsTests.swift */; };
+		9BFE62AD2ABB2F5700F4F7BC /* TapCounterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE62AC2ABB2F5700F4F7BC /* TapCounterViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		9BFE62732AAE216600F4F7BC /* EmptyRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRecordView.swift; sourceTree = "<group>"; };
 		9BFE62912AB9DC4100F4F7BC /* TapCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapCounterViewController.swift; sourceTree = "<group>"; };
 		9BFE62962AB9DCEF00F4F7BC /* TapCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapCounterView.swift; sourceTree = "<group>"; };
+		9BFE62A62ABB281900F4F7BC /* UserDefaultsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProtocol.swift; sourceTree = "<group>"; };
+		9BFE62AA2ABB2E8A00F4F7BC /* UserDefaultsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsTests.swift; sourceTree = "<group>"; };
+		9BFE62AC2ABB2F5700F4F7BC /* TapCounterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapCounterViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 			children = (
 				9BFE62722AAA2B0700F4F7BC /* Info.plist */,
 				9B10FBF12A9F4854009CE54C /* TwStockToolsApp.swift */,
+				9BFE62A52ABB280300F4F7BC /* Protocols */,
 				9BFE628E2AB9DC2300F4F7BC /* ViewControllers */,
 				9BFE62482AA4BB3400F4F7BC /* Utilities */,
 				9B10FC202A9F4A2F009CE54C /* Models */,
@@ -127,6 +134,8 @@
 		9B10FC012A9F4856009CE54C /* TwStockToolsTests */ = {
 			isa = PBXGroup;
 			children = (
+				9BFE62AC2ABB2F5700F4F7BC /* TapCounterViewControllerTests.swift */,
+				9BFE62AA2ABB2E8A00F4F7BC /* UserDefaultsTests.swift */,
 				9BFE625E2AA99A0C00F4F7BC /* StockTradingRecordStoreTests.swift */,
 				9BFE62512AA784AE00F4F7BC /* DateUtilityTests.swift */,
 				9BFE624B2AA4DFDD00F4F7BC /* StockRecordUtilityTests.swift */,
@@ -173,6 +182,14 @@
 				9BFE62912AB9DC4100F4F7BC /* TapCounterViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9BFE62A52ABB280300F4F7BC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9BFE62A62ABB281900F4F7BC /* UserDefaultsProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +304,7 @@
 				9BFE62972AB9DCEF00F4F7BC /* TapCounterView.swift in Sources */,
 				9BFE62742AAE216600F4F7BC /* EmptyRecordView.swift in Sources */,
 				9B10FC222A9F4A4B009CE54C /* StockTradingRecord.swift in Sources */,
+				9BFE62A72ABB281900F4F7BC /* UserDefaultsProtocol.swift in Sources */,
 				9BFE62502AA784A400F4F7BC /* DateUtility.swift in Sources */,
 				9BFE624A2AA4BB4B00F4F7BC /* StockRecordUtility.swift in Sources */,
 				9BFE624E2AA571CF00F4F7BC /* TradingSide.swift in Sources */,
@@ -300,11 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFE62AB2ABB2E8A00F4F7BC /* UserDefaultsTests.swift in Sources */,
 				9B10FC032A9F4856009CE54C /* TwStockToolsTests.swift in Sources */,
 				9BFE625F2AA99A0C00F4F7BC /* StockTradingRecordStoreTests.swift in Sources */,
 				9BFE624C2AA4DFDD00F4F7BC /* StockRecordUtilityTests.swift in Sources */,
 				9BFE62522AA784AE00F4F7BC /* DateUtilityTests.swift in Sources */,
 				9B10FC242AA1B7ED009CE54C /* StockTradingRecordTests.swift in Sources */,
+				9BFE62AD2ABB2F5700F4F7BC /* TapCounterViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
