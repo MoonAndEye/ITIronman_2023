@@ -9,6 +9,10 @@ import SwiftUI
 
 struct StockTradingInputView: View {
     
+    @Environment(\.dismiss) var dismiss
+    
+    @StateObject var store: StockTradingRecordStore
+    
     @State var stockID: String = ""
     @State var stockName: String = ""
     
@@ -26,7 +30,9 @@ struct StockTradingInputView: View {
     
     @State var tradingDate: Date = .now
     
-    private var dateFormatter: DateFormatter = {
+    let dateUtility: DateUtility = .init()
+    
+    var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         return formatter
@@ -119,6 +125,7 @@ struct StockTradingInputView: View {
                 
                 Button {
                     print("cancel did tap")
+                    dismiss()
                 } label: {
                     Text("取消")
                         .frame(minWidth: 140, minHeight: 40)
@@ -128,7 +135,9 @@ struct StockTradingInputView: View {
                 Spacer()
 
                 Button {
-                    print("cancel did tap")
+                    print("add did tap")
+                    /// 當 add 按鈕被按了後，將畫面上的 record 記錄在 store 裡面，並 dismiss()
+                    storeRecordAndDismiss()
                 } label: {
                     Text("新增")
                         .frame(minWidth: 140, minHeight: 40)
@@ -140,10 +149,36 @@ struct StockTradingInputView: View {
             .padding()
         }
     }
+    
+    /// 將畫面上的資料轉換成 StockTradingRecord data model
+    private func getRecord() -> StockTradingRecord {
+        
+        return store.getRecord(stockID: stockID,
+                               stockName: stockName,
+                               tradingSide: tradingSide,
+                               tradingShares: Int(tradingShares) ?? 0,
+                               tradingAmount: Int(tradingAmount) ?? 0,
+                               tradingDateStr: dateUtility.getString(from: tradingDate))
+    }
+    
+    /// 將 rcord 加進 store 裡面
+    private func add(_ record: StockTradingRecord) {
+        store.add(record)
+    }
+    
+    /// 把 record 加進 store 和 dismiss 組裝起來
+    private func storeRecordAndDismiss() {
+        let record = getRecord()
+        add(record)
+        dismiss()
+    }
 }
 
 struct StockTradingInputView_Previews: PreviewProvider {
+    
+    static var store: StockTradingRecordStore = .init()
+    
     static var previews: some View {
-        StockTradingInputView()
+        StockTradingInputView(store: store)
     }
 }

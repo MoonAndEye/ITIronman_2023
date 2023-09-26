@@ -11,11 +11,10 @@ struct TradingRecordListView: View {
     
     @StateObject var store: StockTradingRecordStore = .init()
     
-    var body: some View {
-        
+    @State var showingAddRecordSheet = false
+    
+    var recordList: some View {
         VStack {
-            
-            Text("台股交易紀錄")
             List(store.records) { record in
                 
                 /// 將 record 呈現出來，未來可以寫一個 cell 型的 view 來裝載 record
@@ -43,6 +42,43 @@ struct TradingRecordListView: View {
             }
         }
     }
+    
+    var topContainer: some View {
+        ZStack {
+            HStack {
+                Spacer()
+                Text("台股交易紀錄")
+                    .font(.title)
+                Spacer()
+            }
+            HStack {
+                Spacer()
+                Button {
+                    print("新增按鈕被點擊")
+                    showingAddRecordSheet.toggle()
+                } label: {
+                    Image(systemName: "plus.circle")
+                        .font(.system(size: 37))
+                }
+                .padding()
+                .sheet(isPresented: $showingAddRecordSheet) {
+                    StockTradingInputView(store: store)
+                }
+            }
+        }
+    }
+    
+    var body: some View {
+        
+        VStack {
+            topContainer
+            if store.records.isEmpty {
+                EmptyRecordView()
+            } else {
+                recordList
+            }
+        }
+    }
 }
 
 struct TradingRecordListView_Previews: PreviewProvider {
@@ -53,8 +89,8 @@ struct TradingRecordListView_Previews: PreviewProvider {
     
     private static var store: StockTradingRecordStore = {
         let store = StockTradingRecordStore()
-        store.add(getRecord())
-        store.add(getRecord())
+//        store.add(getRecord())
+//        store.add(getRecord())
         return store
     }()
     
