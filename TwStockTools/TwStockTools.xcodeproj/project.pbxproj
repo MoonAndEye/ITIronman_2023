@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B0F58C22AC2C2AC0075C452 /* TSTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F58C12AC2C2AC0075C452 /* TSTabView.swift */; };
+		9B0F58C42AC2C4E10075C452 /* StockInfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F58C32AC2C4E10075C452 /* StockInfoListView.swift */; };
+		9B0F58CB2AC307E80075C452 /* StockDailyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F58CA2AC307E80075C452 /* StockDailyInfo.swift */; };
+		9B0F58CD2AC307FD0075C452 /* StockInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F58CC2AC307FD0075C452 /* StockInfoRow.swift */; };
+		9B0F58D02AC320640075C452 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F58CF2AC320640075C452 /* APIClient.swift */; };
+		9B0F58D22AC321720075C452 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F58D12AC321720075C452 /* APIClientTests.swift */; };
+		9B0F58D42AC3B4050075C452 /* URLSessionProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F58D32AC3B4050075C452 /* URLSessionProtocolMock.swift */; };
+		9B0F58D62AC46C910075C452 /* StockDailyInfoElementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F58D52AC46C910075C452 /* StockDailyInfoElementTests.swift */; };
 		9B10FBF22A9F4854009CE54C /* TwStockToolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B10FBF12A9F4854009CE54C /* TwStockToolsApp.swift */; };
 		9B10FBF42A9F4854009CE54C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B10FBF32A9F4854009CE54C /* ContentView.swift */; };
 		9B10FBF62A9F4856009CE54C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B10FBF52A9F4856009CE54C /* Assets.xcassets */; };
@@ -43,6 +51,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B0F58C12AC2C2AC0075C452 /* TSTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSTabView.swift; sourceTree = "<group>"; };
+		9B0F58C32AC2C4E10075C452 /* StockInfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockInfoListView.swift; sourceTree = "<group>"; };
+		9B0F58CA2AC307E80075C452 /* StockDailyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDailyInfo.swift; sourceTree = "<group>"; };
+		9B0F58CC2AC307FD0075C452 /* StockInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockInfoRow.swift; sourceTree = "<group>"; };
+		9B0F58CF2AC320640075C452 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		9B0F58D12AC321720075C452 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		9B0F58D32AC3B4050075C452 /* URLSessionProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocolMock.swift; sourceTree = "<group>"; };
+		9B0F58D52AC46C910075C452 /* StockDailyInfoElementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDailyInfoElementTests.swift; sourceTree = "<group>"; };
 		9B10FBEE2A9F4854009CE54C /* TwStockTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwStockTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B10FBF12A9F4854009CE54C /* TwStockToolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwStockToolsApp.swift; sourceTree = "<group>"; };
 		9B10FBF32A9F4854009CE54C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +105,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B0F58C52AC2C6FD0075C452 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9B0F58CC2AC307FD0075C452 /* StockInfoRow.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9B0F58CE2AC320400075C452 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9B0F58CF2AC320640075C452 /* APIClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		9B10FBE52A9F4854009CE54C = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +144,7 @@
 			children = (
 				9BFE62722AAA2B0700F4F7BC /* Info.plist */,
 				9B10FBF12A9F4854009CE54C /* TwStockToolsApp.swift */,
+				9B0F58CE2AC320400075C452 /* Network */,
 				9BFE62A52ABB280300F4F7BC /* Protocols */,
 				9BFE628E2AB9DC2300F4F7BC /* ViewControllers */,
 				9BFE62482AA4BB3400F4F7BC /* Utilities */,
@@ -134,6 +167,8 @@
 		9B10FC012A9F4856009CE54C /* TwStockToolsTests */ = {
 			isa = PBXGroup;
 			children = (
+				9B0F58D52AC46C910075C452 /* StockDailyInfoElementTests.swift */,
+				9B0F58D12AC321720075C452 /* APIClientTests.swift */,
 				9BFE62AC2ABB2F5700F4F7BC /* TapCounterViewControllerTests.swift */,
 				9BFE62AA2ABB2E8A00F4F7BC /* UserDefaultsTests.swift */,
 				9BFE625E2AA99A0C00F4F7BC /* StockTradingRecordStoreTests.swift */,
@@ -141,6 +176,7 @@
 				9BFE624B2AA4DFDD00F4F7BC /* StockRecordUtilityTests.swift */,
 				9B10FC232AA1B7EC009CE54C /* StockTradingRecordTests.swift */,
 				9B10FC022A9F4856009CE54C /* TwStockToolsTests.swift */,
+				9B0F58D32AC3B4050075C452 /* URLSessionProtocolMock.swift */,
 			);
 			path = TwStockToolsTests;
 			sourceTree = "<group>";
@@ -148,11 +184,14 @@
 		9B10FC1D2A9F49CF009CE54C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9B0F58C52AC2C6FD0075C452 /* Cells */,
 				9B10FBF32A9F4854009CE54C /* ContentView.swift */,
 				9BFE62702AAA272000F4F7BC /* TradingRecordListView.swift */,
 				9B10FC1E2A9F49E4009CE54C /* StockTradingInputViewInputView.swift */,
 				9BFE62732AAE216600F4F7BC /* EmptyRecordView.swift */,
 				9BFE62962AB9DCEF00F4F7BC /* TapCounterView.swift */,
+				9B0F58C12AC2C2AC0075C452 /* TSTabView.swift */,
+				9B0F58C32AC2C4E10075C452 /* StockInfoListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +202,7 @@
 				9B10FC212A9F4A4B009CE54C /* StockTradingRecord.swift */,
 				9BFE624D2AA571CF00F4F7BC /* TradingSide.swift */,
 				9BFE625C2AA9985300F4F7BC /* StockTradingRecordStore.swift */,
+				9B0F58CA2AC307E80075C452 /* StockDailyInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -300,17 +340,22 @@
 			files = (
 				9B10FC1F2A9F49E4009CE54C /* StockTradingInputViewInputView.swift in Sources */,
 				9BFE625D2AA9985300F4F7BC /* StockTradingRecordStore.swift in Sources */,
+				9B0F58C42AC2C4E10075C452 /* StockInfoListView.swift in Sources */,
 				9B10FBF42A9F4854009CE54C /* ContentView.swift in Sources */,
+				9B0F58C22AC2C2AC0075C452 /* TSTabView.swift in Sources */,
 				9BFE62972AB9DCEF00F4F7BC /* TapCounterView.swift in Sources */,
 				9BFE62742AAE216600F4F7BC /* EmptyRecordView.swift in Sources */,
 				9B10FC222A9F4A4B009CE54C /* StockTradingRecord.swift in Sources */,
+				9B0F58CD2AC307FD0075C452 /* StockInfoRow.swift in Sources */,
 				9BFE62A72ABB281900F4F7BC /* UserDefaultsProtocol.swift in Sources */,
 				9BFE62502AA784A400F4F7BC /* DateUtility.swift in Sources */,
 				9BFE624A2AA4BB4B00F4F7BC /* StockRecordUtility.swift in Sources */,
 				9BFE624E2AA571CF00F4F7BC /* TradingSide.swift in Sources */,
 				9BFE62922AB9DC4100F4F7BC /* TapCounterViewController.swift in Sources */,
+				9B0F58CB2AC307E80075C452 /* StockDailyInfo.swift in Sources */,
 				9B10FBF22A9F4854009CE54C /* TwStockToolsApp.swift in Sources */,
 				9BFE62712AAA272000F4F7BC /* TradingRecordListView.swift in Sources */,
+				9B0F58D02AC320640075C452 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,9 +363,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B0F58D42AC3B4050075C452 /* URLSessionProtocolMock.swift in Sources */,
 				9BFE62AB2ABB2E8A00F4F7BC /* UserDefaultsTests.swift in Sources */,
+				9B0F58D62AC46C910075C452 /* StockDailyInfoElementTests.swift in Sources */,
 				9B10FC032A9F4856009CE54C /* TwStockToolsTests.swift in Sources */,
 				9BFE625F2AA99A0C00F4F7BC /* StockTradingRecordStoreTests.swift in Sources */,
+				9B0F58D22AC321720075C452 /* APIClientTests.swift in Sources */,
 				9BFE624C2AA4DFDD00F4F7BC /* StockRecordUtilityTests.swift in Sources */,
 				9BFE62522AA784AE00F4F7BC /* DateUtilityTests.swift in Sources */,
 				9B10FC242AA1B7ED009CE54C /* StockTradingRecordTests.swift in Sources */,
