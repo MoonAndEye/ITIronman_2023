@@ -37,5 +37,38 @@ final class APIClientTests: XCTestCase {
         
         XCTAssertEqual(stocks, expectedStockInfos)
     }
+    
+    func testErrorHandleOnURLSessionProtocolMock() async throws {
+        
+        let urlSessionMock = URLSessionProtocolMock()
+        let expect = NSError(domain: "", code: 1234)
+        urlSessionMock.dataForDelegateError = expect
+        sut.session = urlSessionMock
+        do {
+            _ = try await sut.getStockClosPriceList()
+            XCTFail("this test should get error")
+        } catch {
+            let nsError = try XCTUnwrap(error as NSError)
+            XCTAssertEqual(nsError, expect)
+        }
+    }
+    
+    func testStockClosePriceListDecodeError() async throws {
+        
+        let url = try XCTUnwrap(URL(string: "foo"))
+        let urlSessionMock = URLSessionProtocolMock()
+        urlSessionMock.dataForDelegateReturnValue = (
+            try JSONEncoder().encode("dummyObject"),
+            HTTPURLResponse(url: url, statusCode: 200, httpVersion: "HTTP/1.1", headerFields: nil)!
+        )
+        sut.session = urlSessionMock
+        
+        do {
+            _ = try await sut.getStockClosPriceList()
+            XCTFail("this test should not get here")
+        } catch {
+            XCTAssertTrue(error is Swift.DecodingError)
+        }
+    }
 
 }
