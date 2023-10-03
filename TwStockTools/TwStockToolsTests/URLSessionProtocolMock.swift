@@ -14,7 +14,15 @@ class URLSessionProtocolMock: URLSessionProtocol {
     
     var dataForDelegateRequest: URLRequest?
     
+    /// handle error
+    var dataForDelegateError: Error?
+    
     func data(for request: URLRequest, delegate: URLSessionTaskDelegate?) async throws -> (Data, URLResponse) {
+        
+        /// handle error at start
+        if let error = dataForDelegateError {
+            throw error
+        }
         
         dataForDelegateRequest = request
         
